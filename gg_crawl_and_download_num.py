@@ -13,16 +13,16 @@ def downloadImage(url, currentFileName):
 	        handle.write(block)
 
 
-url = 'http://www.girlgeniusonline.com/comic.php?date=20030516'
+url = 'http://www.girlgeniusonline.com/comic.php?date=20140604'
 
 r = requests.get(url)
 soup = BeautifulSoup(r.text)
 
 pagesVisited = []
 
-for i in range(120):
-	pageObject = soup.find("img", attrs={'alt': 'The Next Comic'})
-	pagesVisited.append(pageObject.parent.get('href'))
+for i in range(900):
+	pageObject = soup.find("a", attrs={'title': 'The Next Comic'})
+	pagesVisited.append(pageObject.get('href'))
 	url = pagesVisited[-1]
 	
 	imageSrc = soup.find("img", attrs={'alt': 'Comic'}).get("src")
@@ -32,6 +32,6 @@ for i in range(120):
 	r = requests.get(url)
 	soup = BeautifulSoup(r.text)
 	
-	time.sleep(4)
+	time.sleep(1)
 
 # print "\n".join(pagesVisited)

@@ -1,27 +1,27 @@
 #!/usr/bin/python
 
-from bs4 import BeautifulSoup
-import requests
+def skipMultiples():
+	from bs4 import BeautifulSoup
+	import requests
 
 
 
-url = 'http://kingjamesprogramming.tumblr.com/'
+	url = 'http://kingjamesprogramming.tumblr.com/'
 
-r = requests.get(url)
-soup = BeautifulSoup(r.text)
+	r = requests.get(url)
+	soup = BeautifulSoup(r.text)
 
-quoteStack = []
+	quoteStack = []
 
-for tag in soup.find_all("blockquote"):
-	quote = tag.get_text().strip()
-	quoteStack.append(quote)
+	for tag in soup.find_all("blockquote"):
+		quote = tag.get_text().strip()
+		quoteStack.append(quote)
 
-
-print "\n".join(quoteStack)
-
-print "\n",quoteStack[0]
-
-
+	print "\n".join(quoteStack)
+	print "\n",quoteStack[0]
+	return
+	
+skipMultiples();
 
 
 

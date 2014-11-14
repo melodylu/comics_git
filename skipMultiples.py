@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Written in Python with a whole lot of quick google searches. The for loop took 90 seconds to type out. Getting the library BeautifulSoup to correctly scrape that quotes I wanted off of KingJamesProgramming took 4 hours. Arg.
+# Written in Python with a whole lot of quick google searches. The for loop took 90 seconds to type out. Getting the library BeautifulSoup to correctly scrape that quotes I wanted off of KingJamesProgramming took 4 hours. Arg. Got a lot of fantastic advice from my experienced friend.
 
 def skipMultiples():
 	from bs4 import BeautifulSoup

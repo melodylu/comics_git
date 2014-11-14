@@ -13,7 +13,7 @@ def downloadImage(url, currentFileName):
 	        handle.write(block)
 
 
-url = 'http://www.girlgeniusonline.com/comic.php?date=20140604'
+url = 'http://www.girlgeniusonline.com/comic.php?date=20140716'
 
 r = requests.get(url)
 soup = BeautifulSoup(r.text)

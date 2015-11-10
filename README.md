@@ -1,8 +1,8 @@
-comics_git
+### comics_git ###
 ==========
 
-to make reading things easier
+Python webscraping to make reading things easier
 
 
-These are really quick downloading scripts in python to pull publicly availible comics to my local machine, with a built in timer for politeness (so I'm not spamming the server.)
+These are scripts in python to walk publicly available webcomic archives and download .jpgs to my local machine, with a built in timer for politeness (so I'm not spamming the server.)
 
